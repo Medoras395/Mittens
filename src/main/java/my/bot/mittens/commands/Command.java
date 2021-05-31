@@ -1,4 +1,4 @@
-package my.bot.mittens;
+package my.bot.mittens.commands;
 
 import discord4j.core.event.domain.message.MessageCreateEvent;
 

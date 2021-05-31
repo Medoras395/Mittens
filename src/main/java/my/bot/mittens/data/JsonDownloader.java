@@ -1,8 +1,6 @@
-package my.bot.mittens;
+package my.bot.mittens.data;
 
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -11,7 +9,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.List;
 
 public class JsonDownloader {
 
@@ -20,7 +17,7 @@ public class JsonDownloader {
     String testUrl = "https://jsonplaceholder.typicode.com/albums";
 
 
-    JsonDownloader(){}
+    public JsonDownloader(){}
 
     public static void readJsonFromUrl() throws IOException, InterruptedException {
         String apiKey = "667252f1-5d34-46ba-86c0-8c2ef95fc49a";
