@@ -16,10 +16,12 @@ import discord4j.core.object.entity.channel.VoiceChannel;
 import discord4j.voice.AudioProvider;
 import my.bot.mittens.commands.Command;
 import my.bot.mittens.commands.CommandHandler;
+import my.bot.mittens.data.JokeList;
 import my.bot.mittens.data.JsonDownloader;
 import my.bot.mittens.musicplayer.LavaPlayerAudioProvider;
 import my.bot.mittens.musicplayer.TrackScheduler;
 
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -39,8 +41,11 @@ public class Mittens {
     }
 
 
-    String token = "ODIyNDA1OTAwNDYzMzc0MzY3.YFRzLg.AvLuDuVfmMvmPXcULkOfmhYPRks";
     public static void main(String[] args) {
+
+        JokeList jk = new JokeList();
+        InputStream stream = jk.getFileFromResourceAsStream("jokeList.txt");
+        jk.printInputStream(stream);
 
         CommandHandler commandHandler = new CommandHandler();
         commandHandler.addStandardCommands();

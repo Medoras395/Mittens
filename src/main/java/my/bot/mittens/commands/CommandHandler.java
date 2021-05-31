@@ -19,6 +19,8 @@ public class CommandHandler {
         addCommand(new Hey());
         addCommand(new Cat());
         addCommand(new Help());
+        addCommand(new Join());
+        addCommand(new Joke());
     }
 
     public void handleCommand(final MessageCreateEvent event) {
